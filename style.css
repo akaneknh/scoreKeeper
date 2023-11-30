@@ -1,7 +1,7 @@
-.winner {
-  color: green;
+img {
+  object-fit: contain;
+  padding: 1rem;
 }
-
-.loser {
-  color: red;
+.card-image {
+  background-color: #9ED6DD;
 }

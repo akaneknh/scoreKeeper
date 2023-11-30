@@ -5,3 +5,7 @@ img {
 .card-image {
   background-color: #9ED6DD;
 }
+#btn-footer {
+    gap: 0.5rem;
+    padding:  1rem;
+}

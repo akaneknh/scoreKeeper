@@ -1,0 +1,7 @@
+img {
+  object-fit: contain;
+  padding: 1rem;
+}
+.card-image {
+  background-color: #9ED6DD;
+}

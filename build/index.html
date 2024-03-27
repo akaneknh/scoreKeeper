@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score Keeper</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <section>
+    <div
+      class="mx-auto flex w-80 flex-col justify-center dark:bg-gray-800 rounded-2xl shadow-xl shadow-gray-400/20  p-6 m-6">
+      <img class="aspect-video w-80 rounded-t-2xl object-contain object-center p-4" src="/img/pingpong.png">
+      <div class="p-2">
+
+        <h1 class="text-2xl font-medium dark:text-white pb-2">Ping Pong Score Keeper</h1>
+        <span class="max-w-lg text-3xl font-semibold leading-normal dark:text-white" id="p1Display">0</span> <span
+          class="max-w-lg text-2xl font-semibold leading-normal dark:text-white p-1 " id="p1Display"> to </span><span
+          class="max-w-lg text-3xl font-semibold leading-normal dark:text-white " id="p2Display">0</span>
+        <label for="playto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Playing to</label>
+        <div>
+          <select
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            id="playto">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="p-4 flex items-center justify-evenly">
+        <button id="p1Button"
+          class="bg-gradient-to-r from-blue-400 to-indigo-500 text-white font-bold py-2 px-4 rounded">
+          Player A
+        </button>
+        <button id="p2Button"
+          class="bg-gradient-to-r from-red-400 to-yellow-500 text-white font-bold py-2 px-4 rounded">
+          Player B
+        </button>
+      </div>
+      <button id="reset" class="text-lg font-medium text-gray-900 dark:text-white opacity-50 hover:opacity-100">
+        Reset
+      </button>
+
+
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

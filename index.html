@@ -11,57 +11,60 @@
 </head>
 
 <body>
-
-  <div class="card column is-half is-offset-one-quarter">
-    <div class="is-flex is-justify-content-center">
-      <div class="is-flex-direction-row">
-        <h2 class="is-align-content-center">Player A</h2>
-        <span class="title is-1 has-text-centered" id="p1Display">0</span>
-        <div>
-          <button class="button" id="p1MinusButton">
-            <span class="icon is-small">
-              <i class="fa-solid fa-minus"></i>
-            </span>
-          </button>
-          <button class="button" id="p1Button">
-            <span class="icon is-small">
-              <i class="fa-solid fa-plus"></i>
-            </span>
-          </button>
+  <div class="box">
+        <div class="wrap">
+          <div class="is-flex-direction-row is-align-content-center">
+            <div class="title is-4" id="p1DisplayName">Player A</div>
+            
+            <div class="score" id="p1Display">0</div>     
+            <div>
+              <button class="button" id="p1MinusButton">
+                <div class="icon is-small">
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+              </button>
+              <button class="button" id="p1Button">
+                <div class="icon is-small">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="select-wrap is-flex is-jusify-content-center is-align-content-center">
+            <div class="is-flex-direction-row">
+            <div><label for="playto" class="label is-inline">Playing to</label></div>
+            <div class="select is-normal">
+              <select name="" id="playto">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            </div>
+          </div>
+          <div class="is-flex-direction-row">
+            <div class="title is-4" id="p2DisplayName">Player B</div>
+            <div class="score" id="p2Display">0</div>
+            <div>
+              <button class="button" id="p2MinusButton">
+                <span class="icon is-small">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+              <button class="button" id="p2Button">
+                <span class="icon is-small">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
+        <div class="is-flex is-justify-content-center">
+        <button id="reset" class="button is-primary has-text-weight-bold">Reset</button>
       </div>
 
-      <div class="is-flex flex-direction-row ">
-        <label for="playto" class="label is-inline">Playing to</label>
-        <div class="select is-rounded">
-          <select name="" id="playto">
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-     
-    </div>
 
-      <div class="is-flex-direction-row">
-        <h2>Player B</h2>
-        <span class="title is-1" id="p2Display">0</span>
-        <div>
-          <button class="button" id="p2MinusButton">
-            <span class="icon is-small">
-              <i class="fa-solid fa-minus"></i>
-            </span>
-          </button>
-          <button class="button" id="p2Button">
-            <span class="icon is-small">
-              <i class="fa-solid fa-plus"></i>
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <button id="reset" class="button is-large">Reset</button>
-  </div>
+  
   </div>
 
 

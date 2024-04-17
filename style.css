@@ -1,3 +1,38 @@
 html {
   background-color: #E3E5EF;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 3rem;
+}
+
+.select-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.box {
+ display: flex;
+ flex-direction: column;
+ padding: 3em;
+ margin-top: 3em;
+ row-gap: 2em;
+}
+
+.score {
+font-size: 120px;
+text-align: center;
+}
+
+.select {
+  margin-top: .5rem;
+}

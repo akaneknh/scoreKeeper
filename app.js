@@ -4,7 +4,8 @@ const resetButton = document.querySelector("#reset");
 const p1Display = document.querySelector("#p1Display");
 const p2Display = document.querySelector("#p2Display");
 const winningScoreSelect =  document.querySelector("#playto");
-
+p1MinusButton.disabled = true;
+p2MinusButton.disabled = true;
 let p1Score = 0;
 let p2Score = 0;
 let winningScore = 3;
@@ -23,10 +24,15 @@ function playerHasWinningScore(Score) {
 p1Button.addEventListener("click", function(){
   if(!isGameOver){
     p1Score += 1;
+    if(!isGameOver && p1Score >0 ){
+      p1MinusButton.disabled = false;
+    }
     if(p1Score == winningScore){
      isGameOver = true;
      p1Display.classList.add("has-text-success");
+     p1DisplayName.classList.add("has-text-success");
      p2Display.classList.add("has-text-danger");
+     p2DisplayName.classList.add("has-text-danger");
      p1Button.disabled = true;
      p2Button.disabled = true;
      p1MinusButton.disabled = true;
@@ -36,11 +42,13 @@ p1Button.addEventListener("click", function(){
   }
 })
 
-
 p1MinusButton.addEventListener("click", function(){
   if(!isGameOver && p1Score > 0){
     p1Score -= 1;
     p1Display.textContent = p1Score;
+  }
+  if(!isGameOver && p1Score === 0 ){
+    p1MinusButton.disabled = true;
   }
 })
 p2MinusButton.addEventListener("click", function(){
@@ -48,15 +56,24 @@ p2MinusButton.addEventListener("click", function(){
     p2Score -= 1;
     p2Display.textContent = p2Score;
   }
+  if(!isGameOver && p2Score === 0 ){
+    p2MinusButton.disabled = true;
+  }
 })
 
 p2Button.addEventListener("click", function(){
   if(!isGameOver){
     p2Score += 1;
+  if(!isGameOver && p2Score >0 ){
+    p2MinusButton.disabled = false;
+  }
+ 
     if(p2Score == winningScore ){
      isGameOver = true;
      p2Display.classList.add("has-text-success");
+     p2DisplayName.classList.add("has-text-success");
      p1Display.classList.add("has-text-danger");
+     p1DisplayName.classList.add("has-text-danger");
      p1Button.disabled = true;
      p2Button.disabled = true;
      p1MinusButton.disabled = true;
@@ -80,9 +97,9 @@ function reset() {
   p1Display.textContent = 0;
   p2Display.textContent = 0;
   p1Display.classList.remove("has-text-success", "has-text-danger");
+  p1DisplayName.classList.remove("has-text-success", "has-text-danger");
   p2Display.classList.remove("has-text-success", "has-text-danger");
+  p2DisplayName.classList.remove("has-text-success", "has-text-danger");
   p1Button.disabled = false;
   p2Button.disabled = false;
-  p1MinusButton.disabled = false;
-  p2MinusButton.disabled = false;
 }

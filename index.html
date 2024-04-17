@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-  content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Score Keeper</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/cd05c04e79.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <section class="section">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-half is-offset-one-quarter">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-2by1">
-              <img src="img/pingpong.png" alt="">
-            </figure>
-          </div>
-          <header class="card-header">
-            <p class="card-header-title">
-              Ping Pong Score Keeper
-            </p>
-      
-          </header>
-          <div class="card-content">
-            <div class="content">
-              <h1 class="title is-1"><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
-              <label for="playto" class="label is-large is-inline">Playing to</label>
-              <div class="select is-rounded">
-                <select name="" id="playto">
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </div>
-             
-            </div>
-          </div>
-          <footer class="card-footer">
-            <button id="p1Button" class="button is-primary card-footer-item is-large" >+1 Player One</button>
-            <button id="p2Button" class="button is-info card-footer-item is-large">+1 Player Two</button>
-            <button id="reset" class="button is-danger card-footer-item is-large">Reset</button>
 
-          </footer>
+<body>
+
+  <div class="card column is-half is-offset-one-quarter">
+    <div class="is-flex is-justify-content-center">
+      <div class="is-flex-direction-row">
+        <h2 class="is-align-content-center">Player A</h2>
+        <span class="title is-1 has-text-centered" id="p1Display">0</span>
+        <div>
+          <button class="button" id="p1MinusButton">
+            <span class="icon is-small">
+              <i class="fa-solid fa-minus"></i>
+            </span>
+          </button>
+          <button class="button" id="p1Button">
+            <span class="icon is-small">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="is-flex flex-direction-row ">
+        <label for="playto" class="label is-inline">Playing to</label>
+        <div class="select is-rounded">
+          <select name="" id="playto">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+     
+    </div>
+
+      <div class="is-flex-direction-row">
+        <h2>Player B</h2>
+        <span class="title is-1" id="p2Display">0</span>
+        <div>
+          <button class="button" id="p2MinusButton">
+            <span class="icon is-small">
+              <i class="fa-solid fa-minus"></i>
+            </span>
+          </button>
+          <button class="button" id="p2Button">
+            <span class="icon is-small">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </button>
         </div>
       </div>
     </div>
+    <button id="reset" class="button is-large">Reset</button>
   </div>
-</section>
-  
+  </div>
 
- 
-  
+
   <script src="app.js"></script>
 </body>
+
 </html>
